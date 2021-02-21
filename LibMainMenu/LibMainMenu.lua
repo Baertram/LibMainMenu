@@ -2,7 +2,7 @@
 --[[
 Author: Ayantir, Baertram
 Filename: LibMainMenu.lua
-Version: 9
+Version: 10
 ]]--
 
 --[[
@@ -28,7 +28,7 @@ http://creativecommons.org/licenses/by-nc-sa/3.0/legalcode
 
 ]]--
 --Register LibMainMenu -> LibStub is NOT used any longer! Please use the global variable LibMainMenu
-local MAJOR, MINOR = "LibMainMenu", 9
+local MAJOR, MINOR = "LibMainMenu", 10
 local libMainMenu
 --Check if LibMainMenu was already loaded before properly
 if LibMainMenu ~= nil and LibMainMenu.AddCategory ~= nil
@@ -66,8 +66,8 @@ local function InitializeLMM()
     libMainMenuSubcategoryButton:SetMouseEnabled(true)
 
     local libMainMenuCategoryBarButton = CreateControlFromVirtual("libMainMenuCategoryBarButton", GuiRoot, "ZO_MenuBarButtonTemplate1")
-    libMainMenuCategoryBarButton:SetHandler("OnMouseEnter", function(self) libMainMenuCategoryBarButton_OnMouseEnter(self) end)
-    libMainMenuCategoryBarButton:SetHandler("OnMouseExit", function(self) libMainMenuCategoryBarButton_OnMouseExit(self) end)
+    libMainMenuCategoryBarButton:SetHandler("OnMouseEnter", function(self) LibMainMenuCategoryBarButton_OnMouseEnter(self) end)
+    libMainMenuCategoryBarButton:SetHandler("OnMouseExit", function(self) LibMainMenuCategoryBarButton_OnMouseExit(self) end)
 
     local indicator = CreateControlFromVirtual("$(parent)Indicator", libMainMenuCategoryBarButton, "ZO_MultiIcon")
     indicator:SetHidden(true)
